@@ -57,9 +57,9 @@ session_start();
     
         <SCRIPT LANGUAGE="JavaScript">
         function mi_alerta () {
-        alert ("Inteligencia Artificial"+
+        alert ("Autores anonimos +"+
                "\n"+
-               "\nEquipo 6");
+               "\nEliLand");
         }
         </SCRIPT>
   
