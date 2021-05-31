@@ -2,72 +2,55 @@
 include "askBot.php";
 $bot = new askBot;
 $questions = [
-    //que es covid
-    "que es covid?" => "La enfermedad por coronavirus (COVID 19) es una ‎enfermedad infecciosa causada por un ‎coronavirus recientemente descubierto.",
-    "coronavirus?" => "Los coronavirus son una extensa familia de virus que pueden causar enfermedades tanto en animales como en humanos.",
-    "covid 19?" => "La enfermedad del coronavirus 2019 (COVID-19) es una enfermedad respiratoria que puede transmitirse de persona a persona.",
+    //que es salud alimentaria
+    "que es la salud alimentaria?" => "Es la combinacion de 3 pilares fundamentales para el bienestar las personas, los cuales son seguridad alimentaria, alimentación nutritiva y equilibrada, y calidad del alimento",
+    "como puedo saber si como bien o mal?" => "Para eso existen los patrones de dieta o guías de alimentacion, que te pueden orientar sobre que hay que comer",
+
     //sintomas
-    "sintomas por la enfermedad?" =>"Sintomas graves causador por covid son dificultad para respirar o sensación de falta de aire, Dolor o presión en el pecho, Incapacidad para hablar o moverse.",
-    "sintomas por covid?" =>"Sintomas comunes causados por covid Fiebre, Tos seca y Cansancio." ,
-    "sintomas por covid 19?" =>"Sintomas inusiales Diarrea, Conjuntivitis, Dolor de cabeza, Pérdida del sentido del olfato o del gusto, Erupciones cutáneas o pérdida del color en los dedos de las manos o de los pies.",
-    
-    //apariciones
-      "cuando aparecen los síntomas" => "El período de incubación es el tiempo que transcurre entre la infección por el virus y la aparición de los síntomas de la enfermedad. La mayoría de las estimaciones respecto al periodo de incubación de la COVID-19 oscilan entre 1 y 14 días, y en general se sitúan en torno a 5-6 días.",
-      "apariciones de sintomas?" => "El período de incubación es el tiempo que transcurre entre la infección por el virus y la aparición de los síntomas de la enfermedad. La mayoría de las estimaciones respecto al periodo de incubación de la COVID-19 oscilan entre 1 y 14 días, y en general se sitúan en torno a 5-6 días.",
-      "en cuantos dias aparecen los sintomas?" => "El período de incubación es el tiempo que transcurre entre la infección por el virus y la aparición de los síntomas de la enfermedad. La mayoría de las estimaciones respecto al periodo de incubación de la COVID-19 oscilan entre 1 y 14 días, y en general se sitúan en torno a 5-6 días.",
-
-
-    //duracion
-
-    "cuanto duran los sintomas?" => "El tiempo medio desde el inicio de los síntomas hasta la recuperación es de 2 semanas cuando la enfermedad ha sido leve y 3-6 semanas cuando ha sido grave o crítica.",
-    "duracion de sintomas" => "El tiempo medio desde el inicio de los síntomas hasta la recuperación es de 2 semanas cuando la enfermedad ha sido leve y 3-6 semanas cuando ha sido grave o crítica.",
-    "recuperacion covid?" => "El tiempo medio desde el inicio de los síntomas hasta la recuperación es de 2 semanas cuando la enfermedad ha sido leve y 3-6 semanas cuando ha sido grave o crítica.",
+    "sintomas de una mala alimentacion?" =>"1. Cansancio excesivo\n2. Pies y manos hinchadas\n3. Dificultad para ir al baño\n4. Dermatitis o alteraciones en la piel\n5. Caries frecuentes",
+    "que señales indican que tengo mala alimentacion?" =>"1. Cansancio\n2. Acné\n3. Mal aliento\n4. Estreñimiento\n5. Cabello quebradizo\n6. Piel apagada\n7. Resfriados frecuentes\n8. Exceso de sudor\n9. Vientre inflamado\n10. Irritabilidad" ,
+    "señales de una mala alimentacion" =>"> Piel seca\n> Cambios en el estado de animo y baja energía\n> Ansiedad e Inquietud\n> Comer de más\n> Cabello delgado y uñas quebradizas",
 
     //vulnerables
 
-    "personas que corren mas riesgo?" => "Los principales grupos vulnerables son los mayores de 60 años, hipertensión arterial, diabetes, enfermedades cardiovasculares, enfermedades pulmonares crónicas, cáncer, inmunodeficiencias, y el embarazo por el principio de precaución.",
-    "personas en peligros?" => "Los principales grupos vulnerables son los mayores de 60 años, hipertensión arterial, diabetes, enfermedades cardiovasculares, enfermedades pulmonares crónicas, cáncer, inmunodeficiencias, y el embarazo por el principio de precaución.",
-    "personas vulnerables?" => "Los principales grupos vulnerables son los mayores de 60 años, hipertensión arterial, diabetes, enfermedades cardiovasculares, enfermedades pulmonares crónicas, cáncer, inmunodeficiencias, y el embarazo por el principio de precaución.",
-
-    //transmision
-
-
-    "como se transmite el coronavirus?" => "La transmisión es por contacto estrecho con las secreciones respiratorias que se generan con la tos o el estornudo de una persona enferma.",
-    "como se transmite el covid?" => "La transmisión es por contacto estrecho con las secreciones respiratorias que se generan con la tos o el estornudo de una persona enferma.",
-    "como se transmite?" => "La transmisión es por contacto estrecho con las secreciones respiratorias que se generan con la tos o el estornudo de una persona enferma.",
+    "personas mas vulnerables?" => "Los niños pequeños y las muejeres embarazadas ",
+    "personas en peligro?" => "Los niños pequeños y las muejeres embarazadas ",
     
-    //recontagio
+    //riesgos
 
-    "es posible volverse a contagiar por el virus?" =>"Actualmente no existe evidencia suficiente que permita afirmar que una persona que ha pasado la enfermedad pueda volver a infectarse.",
-    "es posible volverse a contagiar por el coronavirus?" =>"Actualmente no existe evidencia suficiente que permita afirmar que una persona que ha pasado la enfermedad pueda volver a infectarse.",
-    "volverse a contagiar" =>"Actualmente no existe evidencia suficiente que permita afirmar que una persona que ha pasado la enfermedad pueda volver a infectarse.",
+    "cuales son los riesgos de tener una mala alimentacion?" => "El organismo queda susceptible frente a virus y bacterias, de igual forma, se derivan problemas de hipertensión o presión alta. En cuanto al cerebro y el sistema nerviso, presentan falta de memoria, poca capacidad de retencion o aprendizaje, asi como estados de animo desequilibrados",
+    "riesgos de una mala alimentacion?" => "1. Una larga lista de enfermedades asociadas\n2. Deterioro de la memoria\n3. Bajo rendimiento deportivo\n4. Insomnio\n5. Problemas digestivos",
+    "cuales son los peligros de una mala alimentacion?" => "> Desnutrición\n> Anemia ferropénica\n> Obesidad\n> Diabetes Mellitus tipo 2\n> Hipertensión arterial\n> Cáncer\n> Deterioro en la memoria\n> Insomnio\n> Dislipidemia\n> Osteoporosis",
+    "peligros de una mala dieta?" => "Desnutrición\n- Anemia\n- Obesidad\n- Presión arterial alta\n- Enfermedades cognitivas\n- Mala digestión\n- Sistema inmunitario débil\n- Envejecimiento prematura",
+    
+    // Enfermedades
+    "enfermedades" => "~ Diabetes\n~ Hipertensión\n~ Enfermedades cardivasculares\n~ Anemia\n~ Dislipidemia\n~ Algunos tipos de Cáncer",
+    "que enfermades provoca una mala alimentacion?" => "1. Diabetes\n2. Osteopososis\n3. Cáncer de Colón\n4. Sobrepeso y obesidad\n5. Hipertensión arterial\n6. Hipercolesterolemia\n7. Gota\n 8. Caries\n9. Enfermedades Cardiovasculares",
+    "enfermedades causadas por mala alimentacion?" => "- Diabetes\n- Osteoporosis\n- Cáncer\n- Sobrepeso y obesidad\n- Hipertension arterial\n- Hipercolesterolemia\n- Gota\n- Caries",
+    "tipos de enfermedades alimenticias" => "+ Obesidad  y sobrepeso\n+ Diabetes\n+ Aterosclerosis\n+ Celiaquia\n+ Bulimia y Anorexia",
 
-    //vacuna
-    "existe alguna vacuna?" =>"Por el momento no se dispone de vacuna que proteja frente a la COVID-19, pero se están realizando estudios clínicos con diversos candidatos, y sería previsible que en un plazo prudente de tiempo (1-2 años) se autorice alguna vacuna frente al nuevo coronavirus.",
-    "existen vacunas?" =>"Por el momento no se dispone de vacuna que proteja frente a la COVID-19, pero se están realizando estudios clínicos con diversos candidatos, y sería previsible que en un plazo prudente de tiempo (1-2 años) se autorice alguna vacuna frente al nuevo coronavirus.",
-    "vacunas disponibles?" =>"Por el momento no se dispone de vacuna que proteja frente a la COVID-19, pero se están realizando estudios clínicos con diversos candidatos, y sería previsible que en un plazo prudente de tiempo (1-2 años) se autorice alguna vacuna frente al nuevo coronavirus.",
-    
-    ///antibioticos
-    "son eficaces los antibióticos para prevenir o tratar el COVID-19?" =>"No. La norma general que debemos recordar es que los antibióticos no son eficaces contra los virus, solo contra las infecciones bacterianas. La COVID-19 está causada por un virus, de modo que los antibióticos no sirven frente a ella.",
-    "antibioticos para el covid 19?" =>"No. La norma general que debemos recordar es que los antibióticos no son eficaces contra los virus, solo contra las infecciones bacterianas. La COVID-19 está causada por un virus, de modo que los antibióticos no sirven frente a ella.",
-    "antibioticos?" =>"No. La norma general que debemos recordar es que los antibióticos no son eficaces contra los virus, solo contra las infecciones bacterianas. La COVID-19 está causada por un virus, de modo que los antibióticos no sirven frente a ella.",
-    
-    //mascotas
-    "mi mascota me puede contagiar la covid 19?" =>"Aunque ha habido un caso de un perro infectado en Hong Kong, hasta la fecha no hay pruebas de que un perro, un gato o cualquier mascota pueda transmitir la COVID-19.",
-    "las mascotas se contagian?" =>"Aunque ha habido un caso de un perro infectado en Hong Kong, hasta la fecha no hay pruebas de que un perro, un gato o cualquier mascota pueda transmitir la COVID-19.",
-    "animales se pueden contagiar?" =>"Aunque ha habido un caso de un perro infectado en Hong Kong, hasta la fecha no hay pruebas de que un perro, un gato o cualquier mascota pueda transmitir la COVID-19.",
-   
     //conceptos
-    "que es un virus?" =>"Los virus surgen continuamente y representan un desafío para la salud pública.",
-    "que es una Epidemia?" =>"Una epidemia es la aparición de más casos de una enfermedad que los esperados en un área dada en un período de tiempo establecido. En este momento, en la epidemia de COVID-19 nos encontramos en el escenario de importación viral.",
-    "que es el Coronavirus?" =>"El coronavirus SARS-Cov-2 es un virus que apareció en China. Después se extendió a todos los continentes del mundo provocando una pandemia. Actualmente Europa y América son los más afectados.",
-    
-    //info
-    "información importante a considerar?" =>"La mayoría de las personas (alrededor del 80%) se recupera de la enfermedad sin necesidad de realizar ningún tratamiento especial.",
-    "informacion que se debe tomar en cuenta?" =>"Alrededor de 1 de cada 6 personas que contraen el nuevo coronavirus puede desarrollar una enfermedad grave con dificultad para respirar.",
-    "dato importante?" =>"En torno al 2% de las personas que han contraído la enfermedad han muerto. Las personas que tengan fiebre, tos y dificultad para respirar deben buscar atención médica.",
-    
-       
+    "que es nutricion?" => "Es la ingesta de alimentos en relación con las necesidades dietéticas del organismo",
+    "que es la hipertension" => "Es uns transtorno en el que los vasos sanguíneos tiene una tensión persistentemente alta, lo que puede dañarlos",
+    "que es el insomnio" => "Es la dificultad de consiliar o mantener el sueño",
+    "que es la desnutricion" => "Es la perdida de reservas o debilitacion del organismo por recibir poca o mala alimentación",
+    "que es la anemia?" => "Es el síndrome que se caracteriza por la disminucion anormal del número de glóbulos rojos que contiene la sangre",
+    "que es la obesidad?" => "Se define como una acumulación anormal o excesiva de grasa en el cuerpo que es perjudicial para la salud",
+    "que es la presion arterial alta?" => "Es la fuerza de la sangre al empujar contra las paredes de las arterias",
+    "que es la anemia ferropenica?" => "Es una afección en la cual el cuerpo no tiene suficientes glóbulos rojos sanos, ocurre cuando el cuerpo no tiene sificiente cantidad de hierro",
+    "que es la dislipidemia?" => "Es una concentración elevada de lípidos (colesterol, triglicéridos o ambos) o una concentración baja de colesterol rico en lipoproteínas (HDL)",
+    "que es la osteoporosis?" => "Se le conoce como una enfermedad que se caracteriza por una disminución de la densidad del tejido óseo y tiene como consecuencia una fragilidad exagerada de los huesos",
+    "que son las enfermedades cardiovasculares?" => "Son un conjuto de transtornos del corazón y de los vasos sanguineos. Se clasifican en:\n 1. Hipertencion arterial\n 2. Cardiopatía coronaria\n 3. Enfermedad Cerebrovascular\n 4. Enfermedad vascular periferica\n 5. Insuficiencia cardíaca\n 6. Cardiopatía reumática\n cardipatia congénita\n 7. Miocardipatías",
+    "que es la diabetes?" => "Se le conoce como una enfermedad crónica e irreversible del metabolismo en la que se produce un exceso de glucosa en la sangre y en la orina",
+    "que es el cancer de colon?" => "Es un tipo de cáncer en donde el crecimiento de un tumor afecta al tramo del intestino grueso, el cual tambien puedeafectar a la zona rectal",
+    "que es la Hipercolesterolemia?" => "Consiste en un aumento de los niveles considerados normales de colesterol en la sangre",
+    "que es la gota?" => "Es la enfermedad que se produce por la formación de critales de una sal de ácido úrico en los tejidos, mas frecuentemente en las articulaciones",
+    "que son las caries?" => "Es la destrucción de los tejidos de los dientes causada por la presencia de ácidos producidos por las bacterias de la placa depositada en las superficies dentales",
+    "que es la bulimia?" => "Se le conoce como un transtorno alimentario por el cual una persona tiene episodios regulares de comer una gran cantidad de alimento durante los cuales siente una perdida de control sobre la comida",
+    "que es la anorexia?" => "Se le comoce como un transtorno alimentario que causa que las personas pierdan mas peso de lo que se considera saludable para su edad y estatura",
+    "que es la celiaquia?" => "Es una afección del sistema inmunitario en la que las personas no pueden cosumir gluten porque daña su intestino delgado",
+    "que es el cancer?" => "El cáncer puede desarrollarse en cualquier parte del cuerpo, es cuando las celulas crecen sin control y sobrepasan el numero de célular normales. Existen muchos tipos de cancer, es mas que una sola enfermedad. \n\n\n Para mayor información visita el sitio: https://www.cancer.org/es/cancer/aspectos-basicos-sobre-el-cancer/que-es-el-cancer.html",
+
     //name
     "como te llamas?" =>"Soy PlatoBot y estoy para ayudarte.",
     "cual es tu nombre?" =>"Soy PlatoBot y estoy para ayudarte.",
